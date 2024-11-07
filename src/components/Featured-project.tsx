@@ -5,10 +5,8 @@ import Image from "next/image";
 import {
   FolderIcon,
   HeartIcon,
-  ArrowRightIcon,
   ArrowTopRightOnSquareIcon,
   StarIcon,
-  EyeIcon,
   ClockIcon,
 } from "@heroicons/react/24/solid";
 

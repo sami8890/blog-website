@@ -1,4 +1,4 @@
-declare module '@heroicons/react' {
-    const content: any;
-    export = content;
-}
+// declare module '@heroicons/react' {
+//     const content: any;
+//     export = content;
+// }
