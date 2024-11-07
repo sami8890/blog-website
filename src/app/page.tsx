@@ -1,101 +1,86 @@
-import Image from "next/image";
+import FeaturedProject from "@/components/Featured-project";
+import Hero from "@/components/hero";
 
-export default function Home() {
+export type Project = {
+  title: string;
+  description: string;
+  technologies: string[];
+  githubUrl: string;
+  liveUrl: string;
+  image: string;
+  featured: boolean;
+  status: 'completed' | 'in-progress' | 'planned';
+  date: string;
+  category: string;
+};
+
+// This is the list of projects that you want to display
+const projects: Project[] = [
+  {
+    title: "A Landing Page for a Startup",
+    description: "A landing page for a startup that offers a range of services and products. Built with Next.js and Tailwind CSS for a responsive and modern design.",
+    technologies: ["Next.js 14", "Tailwind CSS", "TypeScript", "Vercel"],
+    githubUrl: "https://github.com/project-one",
+    liveUrl: "https://project-one-demo.com",
+    image: "/project/project2.png",
+    featured: true,
+    status: 'completed',
+    date: '2024-06-01',
+    category: 'Web Development'
+  },
+  {
+    title: "An E-commerce Dashboard",
+    description: "An administrative dashboard for managing products, orders, and customers. Built with React and includes real-time data updates.",
+    technologies: ["Next.js 14", "Tailwind CSS", "TypeScript"],
+    githubUrl: "https://github.com/yourusername/dashboard",
+    liveUrl: "https://dashboard-demo.com",
+    image: "/project/project1.png",
+    featured: true,
+    status: 'completed',
+    date: '2024-10-01',
+    category: 'Web Development'
+  },
+  {
+    title: "Weather App",
+    description: "A weather application that provides real-time weather data and forecasts using the OpenWeather API.",
+    technologies: ["React", "OpenWeather API", "Tailwind CSS"],
+    githubUrl: "https://github.com/yourusername/weather-app",
+    liveUrl: "https://weather-app-demo.com",
+    image: "/project/project3.png",
+    featured: true,
+    status: 'completed',
+    date: '2024-10-01',
+    category: 'Web Development'
+  },
+  {
+    title: "Calculator App",
+    description: "A simple calculator app that performs basic arithmetic operations. Built with React and Tailwind CSS for a sleek UI.",
+    technologies: ["React", "Tailwind CSS"],
+    githubUrl: "https://github.com/yourusername/calculator-app",
+    liveUrl: "https://calculator-app-demo.com",
+    image: "/project-four.jpg", // Make sure this image exists
+    featured: true,
+    status: 'completed',
+    date: '2024-10-01',
+    category: 'Web Development'
+  }
+];
+
+const BlogSection: React.FC = () => {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
+    <main>
+      <h1>
+        <Hero
+          author={{
+            name: "Sami Gabol",
+            role: "Website Developer",
+            image: "/main-picture.webp",
+          }}
         />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      </h1>
+      <FeaturedProject projects={projects} />
+    </main>
   );
-}
+};
+
+export default BlogSection;
