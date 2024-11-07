@@ -20,8 +20,8 @@ const projects: Project[] = [
     title: "A Landing Page for a Startup",
     description: "A landing page for a startup that offers a range of services and products. Built with Next.js and Tailwind CSS for a responsive and modern design.",
     technologies: ["Next.js 14", "Tailwind CSS", "TypeScript", "Vercel"],
-    githubUrl: "https://github.com/project-one",
-    liveUrl: "https://project-one-demo.com",
+    githubUrl: "https://github.com/sami8890/figma-to-nextjs-blog_website.git",
+    liveUrl: "https://figma-to-nextjs-blog-website.vercel.app/",
     image: "/project/project2.png",
     featured: true,
     status: 'completed',
@@ -29,10 +29,10 @@ const projects: Project[] = [
     category: 'Web Development'
   },
   {
-    title: "An E-commerce Dashboard",
+    title: "Small E-commerce Website",
     description: "An administrative dashboard for managing products, orders, and customers. Built with React and includes real-time data updates.",
     technologies: ["Next.js 14", "Tailwind CSS", "TypeScript"],
-    githubUrl: "https://github.com/yourusername/dashboard",
+    githubUrl: "#",
     liveUrl: "https://dashboard-demo.com",
     image: "/project/project1.png",
     featured: true,
@@ -41,34 +41,35 @@ const projects: Project[] = [
     category: 'Web Development'
   },
   {
-    title: "Weather App",
-    description: "A weather application that provides real-time weather data and forecasts using the OpenWeather API.",
-    technologies: ["React", "OpenWeather API", "Tailwind CSS"],
-    githubUrl: "https://github.com/yourusername/weather-app",
-    liveUrl: "https://weather-app-demo.com",
-    image: "/project/project3.png",
+    title: "Drone-website",
+    description: "A fully Animated website for drone seeling website.",
+    technologies: ["next.js 14 ", "gsap", "Tailwind CSS"],
+    githubUrl: "https://github.com/sami8890/Drone-website.git",
+    liveUrl: "https://drone-website-theta.vercel.app/",
+    image: "/project/drone.png",
     featured: true,
     status: 'completed',
     date: '2024-10-01',
     category: 'Web Development'
   },
   {
-    title: "Calculator App",
-    description: "A simple calculator app that performs basic arithmetic operations. Built with React and Tailwind CSS for a sleek UI.",
-    technologies: ["React", "Tailwind CSS"],
-    githubUrl: "https://github.com/yourusername/calculator-app",
-    liveUrl: "https://calculator-app-demo.com",
-    image: "/project-four.jpg", // Make sure this image exists
+    title: "Portfolio-website",
+    description: "Myportfolio website to showcase my skills .",
+    technologies: ["Next.js",  "TypeScript", "Tailwind CSS"],
+    githubUrl: "https://github.com/sami8890/MyPortfolio..git",
+    liveUrl: "https://sami-fc.vercel.app/",
+    image: "/project/project3.png",
     featured: true,
     status: 'completed',
     date: '2024-10-01',
     category: 'Web Development'
-  }
+  },
+  
 ];
-
 const BlogSection: React.FC = () => {
   return (
     <main>
+      
       <h1>
         <Hero
           author={{
