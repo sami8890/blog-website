@@ -922,7 +922,7 @@ const About = () => {
                   </div>
                   <div className="absolute inset-0 bg-[#4D9BF3]/80 opacity-0 group-hover:opacity-100 
                     transition-opacity duration-300 flex items-center justify-center">
-                    <h3 className="text-xl font-bold text-white">E-Commerce Dashboard</h3>
+                    <h3 className="text-xl font-bold text-white">E-Commerce Website</h3>
                   </div>
                 </div>
               </motion.div>

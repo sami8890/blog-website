@@ -195,6 +195,7 @@ const Hero: React.FC<HeroProps> = ({
           ))}
         </div>
       </div>
+
     </div>
   );
 };
