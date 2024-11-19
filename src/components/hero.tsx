@@ -3,6 +3,7 @@ import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ArrowRight, ChevronDown, Star, Plus } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 interface HeroProps {
   author: {
@@ -120,25 +121,30 @@ const Hero: React.FC<HeroProps> = ({
               Transitioning from pre-med <span className="text-purple-400 font-bold">Student 
                 </span> to programming, I explore design and technology, sharing insights and tutorials on creating impactful digital experiences. Join me in blending my medical background with tech.
             </p>
-
+                 
             <div className="flex flex-wrap gap-4">
-              <button
-                className="px-6 py-3 bg-blue-500 hover:bg-blue-600 text-white rounded-lg font-medium inline-flex items-center group transition-all duration-300"
-                ref={(el) => {
-                  if (el) buttonRefs.current[0] = el;
-                }}
-              >
-                Latest Articles
-                <ArrowRight className="ml-2 h-5 w-5 transform group-hover:translate-x-1 transition-transform duration-300" />
-              </button>
-              <button
-                className="px-6 py-3 bg-gray-800 hover:bg-gray-700 text-white rounded-lg font-medium transition-colors duration-300"
-                ref={(el) => {
-                  if (el) buttonRefs.current[1] = el;
-                }}
-              >
-                About Me
-              </button>
+              <Link href="/blog">
+                <button
+                  className="px-6 py-3 bg-blue-500 hover:bg-blue-600 text-white rounded-lg font-medium inline-flex items-center group transition-all duration-300"
+                  ref={(el) => {
+                    if (el) buttonRefs.current[0] = el;
+                  }}
+                >
+                  Latest Articles
+                  <ArrowRight className="ml-2 h-5 w-5 transform group-hover:translate-x-1 transition-transform duration-300" />
+                </button>
+              </Link>
+
+              <Link href="/about">
+                <button
+                  className="px-6 py-3 bg-gray-800 hover:bg-gray-700 text-white rounded-lg font-medium transition-colors duration-300"
+                  ref={(el) => {
+                    if (el) buttonRefs.current[1] = el;
+                  }}
+                >
+                  About Me
+                </button>
+              </Link>
             </div>
           </div>
 
@@ -195,7 +201,6 @@ const Hero: React.FC<HeroProps> = ({
           ))}
         </div>
       </div>
-
     </div>
   );
 };

@@ -34,7 +34,9 @@ export default function Navbar() {
   return (
     <nav className="flex sticky top-0 items-center justify-between p-4 bg-[#0a192f]/95 text-[#64ffda] backdrop-blur-md shadow-xl z-50">
       {/* Logo */}
-      <div className="text-2xl font-bold">Sami Gabol</div>
+      <Link href="/">
+      <div className="text-2xl font-bold">Sami Gabol</div> 
+      </Link>
 
       {/* Desktop Menu */}
       <div className="hidden md:flex space-x-8 mr-16">

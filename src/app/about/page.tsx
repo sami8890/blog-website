@@ -869,7 +869,7 @@ const About = () => {
             {/* Call to Action */}
             <div className="flex flex-wrap gap-4">
               <Link
-                href="/portfolio"
+                href="https://sami-portfolio-fc.vercel.app"
                 className="px-6 py-3 bg-[#4D9BF3] hover:bg-[#3d7bc2] rounded-lg 
                   transition-all duration-300 flex items-center space-x-2 group"
                 aria-label="View Portfolio"
@@ -878,7 +878,7 @@ const About = () => {
                 <ExternalLink size={16} className="transform transition-transform group-hover:translate-x-1" />
               </Link>
               <Link
-                href="https://github.com/yourusername"
+                href="https://github.com/sami8890"
                 className="px-6 py-3 border border-[#4D9BF3] text-[#4D9BF3] hover:bg-[#4D9BF3] 
                   hover:text-white rounded-lg transition-all duration-300 flex items-center space-x-2 group"
                 aria-label="Visit GitHub Profile"
@@ -920,10 +920,13 @@ const About = () => {
                     <div className="h-20 bg-gray-800 rounded"></div>
                     <div className="h-20 bg-gray-800 rounded"></div>
                   </div>
+                  <Link href="/projects" >
                   <div className="absolute inset-0 bg-[#4D9BF3]/80 opacity-0 group-hover:opacity-100 
                     transition-opacity duration-300 flex items-center justify-center">
-                    <h3 className="text-xl font-bold text-white">E-Commerce Website</h3>
+                    <h3 className="text-xl font-bold text-white">My Projects</h3>
                   </div>
+                  </Link>
+
                 </div>
               </motion.div>
 

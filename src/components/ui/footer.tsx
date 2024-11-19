@@ -2,7 +2,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import {
     BookOpen, ArrowRight, Twitter, Github, Linkedin,
-    Mail, Heart, Star, Coffee, ExternalLink
+    Mail, Heart, Star, Coffee
 } from 'lucide-react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';

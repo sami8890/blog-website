@@ -29,7 +29,7 @@ const FEATURED_POSTS: Post[] = [
     title: "The Rise of AI: Shaping the Future of Technology",
     description:
       "Explore how artificial intelligence is revolutionizing various industries, from healthcare to transportation, and what the future holds for AI development.",
-    thumbnail: "/featured/rise-of-ai.png", 
+    thumbnail: "/featured/rise-of-ai.png",
     category: "AI & Technology",
     readTime: "7 min read",
     date: "Nov 18, 2024",
@@ -43,7 +43,7 @@ const FEATURED_POSTS: Post[] = [
     title: "Politics in the Digital Age: Social Media's Impact",
     description:
       "In the age of information, social media has become a powerful tool for shaping political opinions and campaigns. This blog explores the growing influence of digital platforms on modern politics.",
-    thumbnail: "/featured/impact.jpg",  
+    thumbnail: "/featured/impact.jpg",
     category: "Politics",
     readTime: "10 min read",
     date: "Nov 17, 2024",
@@ -57,7 +57,7 @@ const FEATURED_POSTS: Post[] = [
     title: "Web 3.0: The Next Internet Revolution",
     description:
       "What is Web 3.0, and how will it change the way we interact with the internet? This article dives into the future of the decentralized web and blockchain technology. (Only Pubg Players Known This Man )",
-    thumbnail: "/featured/web3.jpg",  
+    thumbnail: "/featured/web3.jpg",
     category: "Blockchain & Web",
     readTime: "8 min read",
     date: "Nov 16, 2024",
@@ -85,7 +85,7 @@ const FEATURED_POSTS: Post[] = [
     title: "The Role of AI in Modern Healthcare",
     description:
       "AI is making great strides in healthcare, improving diagnostics, treatments, and patient care. This article explores how AI is transforming the healthcare industry.",
-    thumbnail: "/featured/health.jpg", 
+    thumbnail: "/featured/health.jpg",
     category: "Healthcare & AI",
     readTime: "9 min read",
     date: "Nov 13, 2024",
@@ -94,9 +94,7 @@ const FEATURED_POSTS: Post[] = [
       avatar: "/author-pictures/ethily.jpg",
     },
   },
- 
 ];
-
 
 const FeaturedPosts: React.FC = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -104,11 +102,14 @@ const FeaturedPosts: React.FC = () => {
   const buttonRef = useRef<HTMLButtonElement>(null);
 
   // Create a memoized ref callback function
-  const assignRef = useCallback((element: HTMLDivElement | null, index: number) => {
-    if (element) {
-      cardsRef.current[index] = element;
-    }
-  }, []);
+  const assignRef = useCallback(
+    (element: HTMLDivElement | null, index: number) => {
+      if (element) {
+        cardsRef.current[index] = element;
+      }
+    },
+    []
+  );
 
   useEffect(() => {
     const cards = cardsRef.current;
@@ -291,14 +292,17 @@ const FeaturedPosts: React.FC = () => {
 
         {/* View All Posts Button */}
         <div className="mt-12 text-center">
-          <button
-            ref={buttonRef}
-            className="px-8 py-4 bg-blue-500 hover:bg-blue-600 text-white rounded-lg font-medium inline-flex items-center group transition-all duration-300"
-          >
-            <Link href="/blog"> View All Posts </Link>
-            <ArrowRight className="ml-2 h-5 w-5 transform group-hover:translate-x-1 transition-transform duration-300" />
-          </button>
+          <Link href="/blog" passHref>
+            <button
+              ref={buttonRef}
+              className="px-8 py-4 bg-blue-500 hover:bg-blue-600 text-white rounded-lg font-medium inline-flex items-center group transition-all duration-300"
+            >
+              View All Posts
+              <ArrowRight className="ml-2 h-5 w-5 transform group-hover:translate-x-1 transition-transform duration-300" />
+            </button>
+          </Link>
         </div>
+        
       </div>
     </section>
   );

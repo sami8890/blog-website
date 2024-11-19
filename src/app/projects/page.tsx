@@ -4,7 +4,7 @@ import React, { useEffect, useRef, useCallback, useState } from "react";
 import { Code2, ExternalLink, Github, Star, Eye, GitFork, Search } from "lucide-react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
-
+import Image from "next/image";
 // Register ScrollTrigger plugin
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
@@ -48,7 +48,7 @@ const PROJECTS: Project[] = [
     id: 2,
     title: "Real-state  Website",
     description: "A comprehensive dashboard for e-commerce analytics with real-time sales tracking, inventory management, and customer insights.",
-    technologies: ["React", "Node.js", "MongoDB", "Express", "Chart.js"],
+    technologies: ["Next.js", "React.js", "Tailwind Css", "Gsap", "Framer Motion"],
     image: "/project/realstate.png",
     liveUrl: "https://rebuild-com.vercel.app/",
     githubUrl: "https://github.com/sami8890/rebuild.com.git",
@@ -63,8 +63,8 @@ const PROJECTS: Project[] = [
   {
     id: 3,
     title: "Portfolio Website",
-    description: "Real-time cryptocurrency portfolio tracking application with price alerts and performance analytics using multiple exchange APIs.",
-    technologies: ["React", "Redux", "WebSocket", "Cryptocurrency API", "TailwindCSS"],
+    description: "this is my persnol portfolio Website .I have showcased my skills in this website",
+    technologies: ["React", "Next.js", "Tailwind Css", "Framer Motion", "G.sap"],
     image: "project/portfolio.png",
     liveUrl: "https://sami-portfolio-fc.vercel.app/",
     githubUrl: "https://github.com/sami8890/Portfolio-website.git",
@@ -135,7 +135,7 @@ const Projects: React.FC = () => {
       const tl = gsap.timeline({ paused: true });
       tl.to(project, {
         y: -10,
-        boxShadow: "0 20px 40px rgba(0,0,0,0.3)",
+        boxShadow: "",
         duration: 0.3,
         ease: "power2.out",
       })
@@ -233,7 +233,7 @@ const Projects: React.FC = () => {
               className="group bg-gray-800/50 rounded-xl overflow-hidden border border-gray-700/50 transform-gpu hover:border-gray-600/50 transition-all duration-300"
             >
               <div className="relative h-64 overflow-hidden">
-                <img
+                <Image
                   src={project.image}
                   alt={project.title}
                   className="project-image w-full h-full object-contain transition-transform duration-300"
